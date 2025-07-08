@@ -1,0 +1,32 @@
+﻿<Window x:Class="AMMCLauncher.AddInstanceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AMMCLauncher"
+        mc:Ignorable="d"
+         Title="Add New Instance" Height="250" Width="400"
+        WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Instance Name:"/>
+        <TextBox x:Name="InstanceNameTextBox" Grid.Row="1" Margin="0,0,0,10" Text="New Instance"/>
+
+        <Label Content="Minecraft Version:" Grid.Row="2" VerticalAlignment="Top"/>
+        <ComboBox x:Name="VersionComboBox" Grid.Row="2" VerticalAlignment="Top" Margin="0,25,0,0">
+            <!-- Versions will be added from code -->
+        </ComboBox>
+
+        <!-- Button Panel -->
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Button x:Name="CreateButton" Content="Create" Width="80" Margin="10,0" IsDefault="True" Click="CreateButton_Click"/>
+            <Button x:Name="CancelButton" Content="Cancel" Width="80" IsCancel="True"/>
+        </StackPanel>
+    </Grid>
+</Window>
